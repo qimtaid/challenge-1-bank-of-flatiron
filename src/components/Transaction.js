@@ -4,7 +4,7 @@ import React from "react";
 function Transaction({ transaction}) {
   
   return (
-    <tr>
+    <tr key={transaction.index}>
      
       <td>{transaction.date}</td>
       <td>{transaction.description}</td>

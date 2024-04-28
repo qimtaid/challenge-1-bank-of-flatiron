@@ -2,6 +2,9 @@ import React from "react";
 import Transaction from "./Transaction";
 
 function TransactionsList({transactions}) {
+  if (!transactions || transactions.length === 0) {
+    return <div>No transactions found.</div>;
+  }
   return (
     <table className="ui celled striped padded table">
       <thead>
@@ -20,11 +23,11 @@ function TransactionsList({transactions}) {
           </th>
         </tr>
         </thead>
-        {}
+       
       <tbody>       
         {transactions.map((transaction)=>(
           <Transaction 
-          key={transaction.id}
+          index={transaction.id}
           transaction={transaction}
           />
         ))}       

@@ -8,6 +8,7 @@ function Search({onSearch}) {
     onSearch(searchTerm);
   };
 
+  
   return (
     <div className="ui large fluid icon input">
     <form onSubmit={handleSearch}>
